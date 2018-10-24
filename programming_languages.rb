@@ -1,8 +1,10 @@
 def reformat_languages(languages)
   new_hash = {}
   languages.each do |style, language|
-    if style == :oo && language == :ruby
-      new_hash[:ruby] = {:type => "interpreted"}
+    if style == :oo 
+      language.each do |language, style|
+        if language == :ruby
+          new_hash[:ruby] = {
     end
   end
   
